@@ -1,0 +1,73 @@
+.container {
+    padding-inline: 15px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h1, .h2, .h3 {
+    color: config.$space-cadet;
+    line-height: 1.2
+}
+
+.h1 {
+    font-size: config.$fs-1;
+}
+
+.h2 {
+    font-size: config.$fs-2;
+}
+
+.h3 {
+    font-size: config.$fs-3;
+}
+
+.section-text,
+.features .card-text {
+    color: config.$black-coral;
+    font-size: config.$fs-4;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.btn {
+    font-size: config.$fs-4;
+    font-weight: config.$fw-500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 25px;
+    border-radius: config.$radius-4;
+    transition: config.$transition;
+
+    &>ion-icon {
+        font-size: 16px;
+    }
+}
+
+.btn-primary {
+    color: config.$white;
+    background: config.$red-crayola;
+
+    &:is(:hover, :focus) {
+        background: config.$blue-ryb;
+    }
+}
+
+.btn-secondary {
+    background: config.$blue-ryb;
+    color: config.$white;
+
+    &:is(:hover, :focus) {
+        background: config.$red-crayola;
+    }
+}
+
+.section-subtitle {
+    color: config.$black-coral;
+    font-size: config.$fs-5;
+    font-weight: config.$fw-600;
+    margin-bottom: 15px;
+}
