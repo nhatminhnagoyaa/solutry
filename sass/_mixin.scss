@@ -1,0 +1,19 @@
+@for $num from 1 through 10 {
+    .mt-#{$num * 10} {
+        margin-top: $num * 10 + px;
+    }
+}
+
+@for $num from 1 through 10 {
+    .mb-#{$num * 10} {
+        margin-bottom: $num * 10 + px;
+    }
+}
+
+@mixin fs01($fs-1) {
+    font-size: $fs-1;
+}
+
+@mixin fs02($fs-2) {
+    font-size: $fs-2;
+}

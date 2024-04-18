@@ -48,8 +48,8 @@
 }
 
 .btn-primary {
-    color: config.$white;
     background: config.$red-crayola;
+    color: config.$white;
 
     &:is(:hover, :focus) {
         background: config.$blue-ryb;
