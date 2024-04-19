@@ -93,7 +93,6 @@ body {
 .btn > ion-icon {
   font-size: 16px;
 }
-
 .btn-primary {
   background: hsl(342, 100%, 50%);
   color: hsl(0, 0%, 100%);
@@ -101,7 +100,6 @@ body {
 .btn-primary:is(:hover, :focus) {
   background: hsl(244, 86%, 59%);
 }
-
 .btn-secondary {
   background: hsl(244, 86%, 59%);
   color: hsl(0, 0%, 100%);
@@ -138,13 +136,11 @@ body {
 .header .logo img {
   width: 160px;
 }
-
-.header.nav-active {
+.header .nav-active {
   height: 250px;
   transition: 0.5s ease-out;
 }
-
-.header.active {
+.header .active {
   position: fixed;
   animation: fadeIn 0.5s ease forwards;
 }
@@ -567,13 +563,11 @@ body {
   transition: 0.25s ease;
   z-index: 2;
 }
-
 .go-top.active {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
-
 .go-top:is(:hover, :focus) {
   background: hsl(244, 86%, 59%);
   color: hsl(0, 0%, 100%);
@@ -771,11 +765,16 @@ body {
   .container {
     max-width: 1150px;
   }
+  .hero {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
   .hero .shape {
     display: block;
     position: absolute;
     user-select: none;
-    z-index: 1;
+    z-index: -1;
   }
   .hero .shape-1 {
     top: 0;

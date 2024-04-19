@@ -45,23 +45,23 @@
     &>ion-icon {
         font-size: 16px;
     }
-}
 
-.btn-primary {
-    background: config.$red-crayola;
-    color: config.$white;
-
-    &:is(:hover, :focus) {
-        background: config.$blue-ryb;
-    }
-}
-
-.btn-secondary {
-    background: config.$blue-ryb;
-    color: config.$white;
-
-    &:is(:hover, :focus) {
+    &-primary {
         background: config.$red-crayola;
+        color: config.$white;
+
+        &:is(:hover, :focus) {
+            background: config.$blue-ryb;
+        }
+    }
+
+    &-secondary {
+        background: config.$blue-ryb;
+        color: config.$white;
+
+        &:is(:hover, :focus) {
+            background: config.$red-crayola;
+        }
     }
 }
 

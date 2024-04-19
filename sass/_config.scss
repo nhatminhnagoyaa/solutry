@@ -16,7 +16,6 @@ $fs-5: 0.813rem;
 $fw-500: 500;
 $fw-600: 600;
 $fw-700: 700;
-
 $transition: 0.25s ease;
 $transition-2: 0.5s ease;
 
@@ -27,12 +26,12 @@ $radius-8: 8px;
 $radius-12: 12px;
 
 $breakpoint-sp: 575px;
-$breakpoint-sp_up: 768px;
-$breakpoint-tablet: 992px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet_up: 992px;
 $breakpoint-pc: 1200px;
 
-@mixin iconSelected ($derection) {
 
+@mixin iconSelected($derection) {
     display: grid;
     border-radius: 50%;
     place-items: center;
@@ -43,7 +42,7 @@ $breakpoint-pc: 1200px;
         color: $white;
     }
 
-    @if($derection==icon) {
+    @if ($derection==icon) {
         background: $cultured;
         color: $red-crayola;
         min-width: 30px;
@@ -72,8 +71,6 @@ $breakpoint-pc: 1200px;
         height: 35px;
     }
 
-
-
     @else {
         @error "Unknown direction #{$direction}.";
     }
@@ -93,20 +90,44 @@ $breakpoint-pc: 1200px;
     }
 }
 
+@mixin fs-1 {
+    @media screen and (min-width: $breakpoint-sp) {
+        @content;
+    }
+}
+
+@mixin fs-2 {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin fs-3 {
+    @media screen and (min-width: $breakpoint-tablet_up) {
+        @content;
+    }
+}
+
+@mixin fs-4 {
+    @media screen and (min-width: $breakpoint-pc) {
+        @content;
+    }
+}
+
 @mixin sp {
     @media screen and (min-width: $breakpoint-sp) {
         @content;
     }
 }
 
-@mixin sp-up {
-    @media screen and (min-width: $breakpoint-sp_up) {
+@mixin tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
         @content;
     }
 }
 
-@mixin tablet {
-    @media screen and (min-width: $breakpoint-tablet) {
+@mixin tablet_up {
+    @media screen and (min-width: $breakpoint-tablet_up) {
         @content;
     }
 }

@@ -25,17 +25,18 @@
     .logo img {
         width: 160px;
     }
+
+    .nav-active {
+        height: 250px;
+        transition: 0.5s ease-out;
+    }
+
+    .active {
+        position: fixed;
+        animation: fadeIn 0.5s ease forwards;
+    }
 }
 
-.header.nav-active {
-    height: 250px;
-    transition: 0.5s ease-out;
-}
-
-.header.active {
-    position: fixed;
-    animation: fadeIn 0.5s ease forwards;
-}
 
 @keyframes fadeIn {
     0% {
@@ -90,11 +91,9 @@
     }
 }
 
-
 .header.nav-active .navbar-link {
     opacity: 1;
 }
-
 
 .header .btn {
     display: none;
@@ -480,17 +479,17 @@
     transition: translateY(10px);
     transition: config.$transition;
     z-index: 2;
-}
 
-.go-top.active {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-}
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
 
-.go-top:is(:hover, :focus) {
-    background: config.$blue-ryb;
-    color: config.$white;
+    &:is(:hover, :focus) {
+        background: config.$blue-ryb;
+        color: config.$white;
+    }
 }
 
 /* MEDIA QUERIES */
@@ -515,7 +514,7 @@
 }
 
 /* RESPONSIVE LARGER THAN 768PX SCREEN */
-@include config.sp-up {
+@include config.tablet {
     html {
         font-size: 17.5px;
     }
@@ -595,7 +594,7 @@
 
 
 /* RESPONSIVE LARGER THAN 992PX SCREEN */
-@include config.tablet {
+@include config.tablet_up {
     html {
         font-size: 18px;
     }
@@ -792,11 +791,15 @@
     }
 
     .hero {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
         .shape {
             display: block;
             position: absolute;
             user-select: none;
-            z-index: 1;
+            z-index: -1;
         }
 
         .shape-1 {
